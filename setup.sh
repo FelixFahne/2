@@ -16,6 +16,14 @@ pip install --upgrade pip
 # Install dependencies
 pip install -r requirements.txt
 
+# Download required JavaScript libraries
+mkdir -p libs
+XLXS_JS_URL="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"
+if [ ! -f libs/xlsx.full.min.js ]; then
+    echo "Downloading xlsx.full.min.js from $XLXS_JS_URL"
+    wget -q -O libs/xlsx.full.min.js "$XLXS_JS_URL"
+fi
+
 cat <<'INSTRUCTIONS'
 
 The environment is now prepared. To convert the sample Excel files to CSV and
