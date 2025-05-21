@@ -8,7 +8,13 @@ For more details, please read: Interaction Matters: A Three-Level Multi-class En
 
 Dialogues labelled for three levels (from the above paper) can be found in SLDEA data.
 
-Features exacted from the annotated datasets can be found in feature_label.csv. 
+Features extracted from the annotated datasets can be found in feature_label.csv.
+
+### Setup
+
+Run `setup.sh` to install Python dependencies and automatically download the
+`xlsx.full.min.js` library used by the Gradio interface. This avoids storing the
+large minified file in the repository while still making it available at runtime.
 
 Python script data/explore_data.py provides an example of interfacing with the data.
 
